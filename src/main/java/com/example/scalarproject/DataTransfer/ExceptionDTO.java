@@ -5,12 +5,14 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
-@Getter
+
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 public class ExceptionDTO {
-    private int status;
+	private int status;
     private String message;
+
 
 }

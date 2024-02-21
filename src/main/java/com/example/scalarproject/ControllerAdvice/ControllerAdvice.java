@@ -10,6 +10,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ControllerAdvice {
     @ExceptionHandler(NotFoundException.class)
     private ResponseEntity<ExceptionDTO> NotFoundExceptionMethod(NotFoundException notFoundExceptions){
-        return new ResponseEntity(new ExceptionDTO(HttpStatus.NOT_FOUND.value(), notFoundExceptions.getMessage()),(HttpStatus.NOT_FOUND));
+        return new ResponseEntity<ExceptionDTO>(new ExceptionDTO(HttpStatus.NOT_FOUND.value(), notFoundExceptions.getMessage()),(HttpStatus.NOT_FOUND));
     }
 }

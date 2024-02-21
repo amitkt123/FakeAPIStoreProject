@@ -18,12 +18,12 @@ public class GenericProductDTO extends BaseDTO{
     }
 
     public GenericProductDTO(long id, String title, long price, String category, String description, String image) {
-        this.id = id;
-        this.title = title;
-        this.price = price;
-        this.category = category;
-        Description = description;
-        this.image = image;
+        this.setId(id);
+        this.setTitle(title);
+        this.setPrice(price);
+        this.setCategory(category);
+        this.setDescription(description);
+        this.setImage(image);
     }
 
 }

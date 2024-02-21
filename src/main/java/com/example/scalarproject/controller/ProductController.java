@@ -1,21 +1,21 @@
 package com.example.scalarproject.controller;
 
-import com.example.scalarproject.DataTransfer.ExceptionDTO;
-import com.example.scalarproject.DataTransfer.GenericProductDTO;
-import com.example.scalarproject.DataTransfer.ProductDTO;
-import com.example.scalarproject.Exceptions.NotFoundException;
-import com.example.scalarproject.Services.FakeStoreProductService;
-import com.example.scalarproject.Services.ProductServices;
-import org.apache.coyote.Response;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import com.example.scalarproject.Models.Product;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import com.example.scalarproject.DataTransfer.GenericProductDTO;
+import com.example.scalarproject.Exceptions.NotFoundException;
+import com.example.scalarproject.Services.ProductServices;
 
 @RestController()
 @RequestMapping("/products")
@@ -40,7 +40,7 @@ public class ProductController {
     }
 
 
-    @RequestMapping(value = "/delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public GenericProductDTO DeleteProductbyId(@PathVariable("id") Long id) throws NotFoundException {
        ResponseEntity<GenericProductDTO> genericProductDTOResponseEntity = prodServ.DeleteProductByID(id);
        if(genericProductDTOResponseEntity.getStatusCode() == HttpStatusCode.valueOf(500))

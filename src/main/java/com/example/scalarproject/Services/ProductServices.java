@@ -1,12 +1,11 @@
 package com.example.scalarproject.Services;
 
-import com.example.scalarproject.DataTransfer.GenericProductDTO;
-import com.example.scalarproject.DataTransfer.ProductDTO;
-import com.example.scalarproject.Exceptions.NotFoundException;
-import com.example.scalarproject.Models.Product;
+import java.util.List;
+
 import org.springframework.http.ResponseEntity;
 
-import java.util.List;
+import com.example.scalarproject.DataTransfer.GenericProductDTO;
+import com.example.scalarproject.Exceptions.NotFoundException;
 
 
 public interface ProductServices {
