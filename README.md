@@ -12,6 +12,7 @@ This project demonstrates how to consume external APIs using Spring Boot. The ap
 - **Service Layer**: Clean separation of concerns through service layers.
 
 ## Project Link
+[Read documentation of the FakeStore ](https://fakestoreapi.com/docs)
 
 [GitHub Repository: FakeAPIStoreProject](https://github.com/amitkt123/FakeAPIStoreProject.git)
 
